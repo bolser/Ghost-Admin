@@ -309,8 +309,6 @@ export default Controller.extend(SettingsMenuMixin, {
             if (!newPublishedAt.isValid()) {
                 errMessage = 'Published Date must be a valid date with format: ' +
                     'DD MMM YY @ HH:mm (e.g. 6 Dec 14 @ 15:00)';
-            } else if (newPublishedAt.diff(new Date(), 'h') > 0) {
-                errMessage = 'Published Date cannot currently be in the future.';
             }
 
             // If errors, notify and exit.
